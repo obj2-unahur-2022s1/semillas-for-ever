@@ -1,9 +1,8 @@
-package ar.edu.unahur.obj2.ejemplo
+package ar.edu.unahur.obj2.semillas
 
 import io.kotest.core.spec.style.DescribeSpec
 import io.kotest.matchers.booleans.shouldBeFalse
 import io.kotest.matchers.booleans.shouldBeTrue
-import io.kotest.matchers.doubles.shouldBeBetween
 import io.kotest.matchers.shouldBe
 
 class SemillasTest : DescribeSpec ({
@@ -14,19 +13,15 @@ class SemillasTest : DescribeSpec ({
         val mentita = Menta(0.3, 2021)
         val soja = Soja(0.6, 2009)
 
-        describe("los atributos funcionan") {
-            it("altura  y anioSemilla") {
-                menta.altura.shouldBe(1.0)
-                menta.anioSemilla.shouldBe(2021)
-            }
+        it("probamos los atributos altura  y anioSemilla") {
+            menta.altura.shouldBe(1.0)
+            menta.anioSemilla.shouldBe(2021)
         }
 
-        describe("verificar si da semillas") {
-            it("menta chica y grande") {
-                menta.daSemillas().shouldBeTrue()
-                mentita.daSemillas().shouldBeFalse()
-                soja.daSemillas().shouldBeFalse()
-            }
+        it("verificar si da semillas") {
+            menta.daSemillas().shouldBeTrue()
+            mentita.daSemillas().shouldBeFalse()
+            soja.daSemillas().shouldBeFalse()
         }
 
         it("es fuerte") {
@@ -40,11 +35,13 @@ class SemillasTest : DescribeSpec ({
             soja.espacio().shouldBe(0.3)
         }
 
-        val l = mutableListOf<Planta>()
-        l.add(soja)
-        l.add(menta)
-        l.add(mentita)
-        val superficie = Math.ceil(l.sumOf { p: Planta -> p.espacio() })
-        superficie.shouldBe(4)
+        it("verifico la suma de varias") {
+            val superficie = mutableListOf(
+                soja.espacio(),
+                menta.espacio(),
+                mentita.espacio()
+            ).sum()
+            Math.ceil(superficie).shouldBe(4)
+        }
     }
 })
