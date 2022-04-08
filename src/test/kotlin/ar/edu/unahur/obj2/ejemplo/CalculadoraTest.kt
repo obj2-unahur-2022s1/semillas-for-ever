@@ -15,7 +15,7 @@ class CalculadoraTest : DescribeSpec({
       it("por cero") {
         shouldThrow<ArithmeticException> { Calculadora(10, 0).division() }
       }
-
+     /* Soy un comentario - 1 commit*/
       it("por número distinto a cero") {
         Calculadora(12, 2).division().shouldBe(6)
       }
