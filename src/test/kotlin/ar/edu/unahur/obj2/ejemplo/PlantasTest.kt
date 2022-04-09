@@ -46,4 +46,37 @@ class EspeciesTest : DescribeSpec({
     }
 
   }
+  describe("Test Quinoa"){
+    /*
+      Da semillas si el año de obtención de la semilla que le dio origen esté entre el 2001 y el 2008 o es fuerte.
+      Si ocupa menos de 0.3 m2, entonces tolera 10 horas de sol al día (Es fuerte); si no, corre el valor genérico (No es fuerte).
+     */
+
+    val quinoaA = Quinoa(2010, 0.2,0.2) //da semilla por espacio que ocupa
+    val quinoaB = Quinoa(2006, 0.5,0.9) // da semilla por año de obtencion
+    val quinoaC = Quinoa(2011, 0.4,0.4) //no da semilla por espacio y año de obtencion
+    val quinoaD = Quinoa(2000, 0.5,0.3) // no da semilla
+    it("Test: Quinoa da semillas "){
+      quinoaA.daSemillas().shouldBeTrue()
+      quinoaB.daSemillas().shouldBeTrue()
+    }
+    it("Test: Quinoa no da semillas"){
+      quinoaC.daSemillas().shouldBeFalse()
+      quinoaD.daSemillas().shouldBeFalse()
+    }
+    it("Test: Quinoa horas de sol toleradas"){
+      quinoaA.horasDeSolToleradas().shouldBe(10)
+      quinoaD.horasDeSolToleradas().shouldBe(7)
+      quinoaB.horasDeSolToleradas().shouldBe(7)
+      quinoaC.horasDeSolToleradas().shouldBe(7)
+    }
+    it("Test: Quinoa es fuerte"){
+      quinoaA.esFuerte().shouldBeTrue()
+    }
+    it("Test: Quinoa no es fuerte"){
+      quinoaB.esFuerte().shouldBeFalse()
+      quinoaC.esFuerte().shouldBeFalse()
+      quinoaD.esFuerte().shouldBeFalse()
+    }
+  }
 })
