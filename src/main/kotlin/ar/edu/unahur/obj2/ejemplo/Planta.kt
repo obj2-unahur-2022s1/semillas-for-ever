@@ -5,7 +5,7 @@ interface Planta {
     val altura: Double
 
     fun horasDeSolToleradas() = 7
-    fun esFuerte(): Boolean
+    fun esFuerte() = this.horasDeSolToleradas() >= 9
     fun espacio(): Double
     fun condicionAdicional(): Boolean
     fun daSemillas(): Boolean {
