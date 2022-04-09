@@ -7,10 +7,6 @@ open class Menta(override val anioObtencion: Int, override val altura: Double) :
     override fun condicionAdicional(): Boolean {
         return this.altura >0.4
     }
-    override fun esFuerte(): Boolean {
-        return this.horasDeSolToleradas() > 9
-    }
-
 }
 
 open class Soja(override val anioObtencion: Int, override val altura: Double) : Planta{
@@ -30,10 +26,6 @@ open class Soja(override val anioObtencion: Int, override val altura: Double) : 
         }
          return tolerancia
     }
-    override fun esFuerte(): Boolean {
-        return this.horasDeSolToleradas() > 9
-    }
-
 }
 
 class Quinoa(override val anioObtencion: Int, override val altura: Double, val espacio: Double) : Planta{
@@ -50,22 +42,15 @@ class Quinoa(override val anioObtencion: Int, override val altura: Double, val e
     override fun condicionAdicional(): Boolean {
         return this.anioObtencion in 2001..2008
     }
-    override fun esFuerte(): Boolean {
-        TODO("Not yet implemented")
-    }
 }
 
 //Variedades
 
 class SojaTrangenica(anioObtencion: Int, altura: Double): Soja(anioObtencion, altura){
-
     override fun daSemillas() = false
-
 }
 
 class Peperina(anioObtencion: Int, altura: Double) : Menta(anioObtencion, altura){
-
     override fun espacio() = super.espacio() * 2
-
 }
 
