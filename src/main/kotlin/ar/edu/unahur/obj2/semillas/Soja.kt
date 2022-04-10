@@ -19,5 +19,5 @@ class Soja(
     override fun daNuevasSemillas(): Boolean {
         return fechaDeObtencion > 2007 && altura in .75..0.9
     }
-    
+
 }
