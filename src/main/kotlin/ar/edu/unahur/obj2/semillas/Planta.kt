@@ -4,7 +4,7 @@ open class Planta(
     fechaDeObtencion: Int,
     altura: Double
 ) {
-    fun horasDeSolTolera(): Int {
+    open fun horasDeSolTolera(): Int {
         return 7
     }
 
