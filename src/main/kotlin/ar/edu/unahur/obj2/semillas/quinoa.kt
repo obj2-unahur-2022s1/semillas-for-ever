@@ -7,6 +7,7 @@ class Quinoa(
 ) : Planta(
     fechaDeObtencion, altura
 ){
+    
     override fun horasDeSolTolera(): Int{
         var horasQueTolera: Int = 7
         if (espacio < .3){
@@ -26,7 +27,4 @@ class Quinoa(
     override fun espacioQueOcupa(): Double {
         return espacio
     }
-
-
-
 }
