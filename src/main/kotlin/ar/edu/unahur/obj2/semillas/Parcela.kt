@@ -8,7 +8,7 @@ class Parcela(
 ) {
     fun superficie(): Int = ancho * largo
 
-    fun cantidadMaxima(): Int {
+    fun cantidadMaximaDePlantas(): Int {
         return if(ancho > largo) {
             superficie() / 5
         } else {
@@ -20,13 +20,14 @@ class Parcela(
         return plantas.any { it.horasDeSolTolera() < horasDeSolQueRecibe }
     }
 
-    fun plantar(planta: Planta): Unit {
+    fun plantar(planta: Planta) {
+        if (cantidadMaximaDePlantas() == totalDePlantas()) {
+            throw Exception("Cantidad maxima de plantas por parcela superada.")
+        }
         plantas.add(planta)
     }
 
-    fun totalDePlantas(): Int {
-        return plantas.size
-    }
+    fun totalDePlantas(): Int = plantas.size
 
     fun plantas(): List<Planta> = plantas
 }
