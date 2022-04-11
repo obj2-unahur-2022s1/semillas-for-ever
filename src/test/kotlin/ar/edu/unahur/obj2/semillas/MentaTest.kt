@@ -28,11 +28,11 @@ class MentaTest: DescribeSpec ({
         }
 
         it("una menta de 0.5 metros, deberia dar semillas") {
-            mentaNormal.esFuerte().shouldBeTrue()
+            mentaNormal.daNuevasSemillas().shouldBeTrue()
         }
 
-        it("una menta de 0.5 metros, deberia dar semillas") {
-            mentaChica.espacioQueOcupa().shouldBe(1.5)
+        it("una menta de 0.5 metros, ocuparía 1.5 metros cuadrados") {
+            mentaNormal.espacioQueOcupa().shouldBe(1.5)
         }
     }
 })

@@ -36,7 +36,7 @@ class SojaTest: DescribeSpec ({
             sojaChica.daNuevasSemillas().shouldBeFalse()
         }
 
-        it("una soja de 0.8 metros del 2006, no deberia dar semillas.") {
+        it("una soja de 0.8 metros del 2006, debería tolerar 8 horas de sol.") {
             sojaVieja.horasDeSolTolera().shouldBe(8)
         }
         
