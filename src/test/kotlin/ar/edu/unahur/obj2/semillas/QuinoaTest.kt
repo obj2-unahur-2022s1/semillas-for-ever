@@ -13,27 +13,24 @@ class QuinoaTest : DescribeSpec (
             val quinoa2 = Quinoa(2006,1.0,.9)
             val quinoa3 = Quinoa(2022,1.0,2.0)
 
-            it("daNuevasSemillas"){
+            it("Una quinoa de 0.2 m2 de espacio que fue obtenida en el 2010 deberia dar semillas "){
                 quinoa1.daNuevasSemillas().shouldBeTrue()
+            }
+            it("Una quinoa de 0.9 m2 de espacio que fue obtenida en el 2006 deberia dar semillas "){
                 quinoa2.daNuevasSemillas().shouldBeTrue()
+            }
+            it("Una quinoa de 2.0 m2 de espacio que fue obtenida en el 2022 no deberia dar semillas "){
                 quinoa3.daNuevasSemillas().shouldBeFalse()
             }
-
-            it("horasDeSolTolera"){
+            it("Una quinoa de 0.2 m2 de espacio tolera hasta 10 horas de sol"){
                 quinoa1.horasDeSolTolera().shouldBe(10)
-                quinoa2.horasDeSolTolera().shouldBe(7)
-                quinoa3.horasDeSolTolera().shouldBe(7)
             }
-
-            it("espacioQueOcupa"){
-                quinoa1.espacioQueOcupa().shouldBe(0.2)
-                quinoa2.espacioQueOcupa().shouldBe(0.9)
-                quinoa3.espacioQueOcupa().shouldBe(2.0)
-
+            it("Una quinoa de 0.9 m2 de espacio tolera hasta 7 horas de sol"){
+                quinoa1.horasDeSolTolera().shouldBe(7)
             }
-
+            it("Una quinoa de 2.0 m2 de espacio tolera hasta 7 horas de sol"){
+                quinoa1.horasDeSolTolera().shouldBe(7)
+            }
         }
-
-
     }
 )
