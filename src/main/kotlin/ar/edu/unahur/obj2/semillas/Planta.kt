@@ -1,8 +1,8 @@
 package ar.edu.unahur.obj2.semillas
 
-open class Planta(
+abstract class Planta(
     private val fechaDeObtencion: Int,
-    private val altura: Double
+    open val altura: Double
 ) {
     open fun horasDeSolTolera(): Int {
         return 7
@@ -12,11 +12,11 @@ open class Planta(
         return horasDeSolTolera() > 9
     }
 
-    open fun daNuevasSemillas(): Boolean {
-        return true
-    }
+    abstract fun daNuevasSemillas(): Boolean
 
     open fun espacioQueOcupa(): Double {
         return 8.0
     }
+
+    abstract fun esParcelaIdeal(parcela: Parcela): Boolean
 }

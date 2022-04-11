@@ -2,7 +2,7 @@ package ar.edu.unahur.obj2.semillas
 
 open class Menta(
     private val fechaDeObtencion: Int,
-    private val altura: Double
+    override val altura: Double
 ) : Planta(
     fechaDeObtencion, altura
 ){
@@ -12,5 +12,9 @@ open class Menta(
 
     override fun espacioQueOcupa(): Double {
         return altura.plus(1.0)
+    }
+
+    override fun esParcelaIdeal(parcela: Parcela): Boolean {
+        return parcela.superficie() > 6
     }
 }

@@ -2,7 +2,7 @@ package ar.edu.unahur.obj2.semillas
 
 class Quinoa(
     private val fechaDeObtencion: Int,
-    private val altura: Double,
+    override val altura: Double,
     private val espacio: Double
 ) : Planta(
     fechaDeObtencion, altura
@@ -25,5 +25,9 @@ class Quinoa(
 
     override fun espacioQueOcupa(): Double {
         return espacio
+    }
+
+    override fun esParcelaIdeal(parcela: Parcela): Boolean {
+        return !parcela.plantas().any { it.altura > 1.5 }
     }
 }
