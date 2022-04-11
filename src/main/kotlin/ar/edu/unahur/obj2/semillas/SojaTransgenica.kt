@@ -8,7 +8,7 @@ class SojaTransgenica(
 ) {
     override fun daNuevasSemillas(): Boolean = false
 
-    override fun esIdeal(parcela: Parcela): Boolean {
+    override fun esParcelaIdeal(parcela: Parcela): Boolean {
         return parcela.totalDePlantas() === 1
     }
 }

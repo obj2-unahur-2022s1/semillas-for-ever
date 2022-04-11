@@ -27,7 +27,7 @@ class Quinoa(
         return espacio
     }
 
-    override fun esIdeal(parcela: Parcela): Boolean {
+    override fun esParcelaIdeal(parcela: Parcela): Boolean {
         return !parcela.plantas().any { it.altura > 1.5 }
     }
 }

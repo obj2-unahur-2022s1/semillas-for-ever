@@ -1,8 +1,6 @@
 package ar.edu.unahur.obj2.semillas
 
 import io.kotest.core.spec.style.DescribeSpec
-import io.kotest.matchers.booleans.shouldBeTrue
-import io.kotest.matchers.booleans.shouldBeFalse
 import io.kotest.matchers.shouldBe
 
 class ParcelaTest: DescribeSpec ({
@@ -20,7 +18,7 @@ class ParcelaTest: DescribeSpec ({
         )
 
         it("la cantidad maxima de plantas de una parcela de 4x4 deberia ser 9"){
-            parcelaChica.cantidadMaxima().shouldBe(9)
+            parcelaChica.cantidadMaximaDePlantas().shouldBe(9)
         }
 
         it("deberia agregar una nueva planta a la parcela"){
