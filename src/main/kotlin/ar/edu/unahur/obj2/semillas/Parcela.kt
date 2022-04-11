@@ -27,9 +27,7 @@ class Parcela(
         plantas.add(planta)
     }
 
-    fun totalDePlantas(): Int {
-        return plantas.size
-    }
+    fun totalDePlantas(): Int = plantas.size
 
     fun plantas(): List<Planta> = plantas
 }
