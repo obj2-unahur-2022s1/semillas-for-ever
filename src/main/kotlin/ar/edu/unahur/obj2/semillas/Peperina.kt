@@ -6,6 +6,6 @@ class Peperina (
     Menta(fechaDeObtencion, altura){
 
     override fun espacioQueOcupa(): Double {
-        return (altura + 1.0) * 2
+        return (altura + 1.0 * 2)
     }
 }

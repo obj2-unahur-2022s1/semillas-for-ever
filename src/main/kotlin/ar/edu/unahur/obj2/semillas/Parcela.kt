@@ -8,7 +8,7 @@ class Parcela(
 ) {
     fun superficie(): Int = ancho * largo
 
-    fun cantidadMaxima(): Int {
+    fun cantidadMaximaDePlantas(): Int {
         return if(ancho > largo) {
             superficie() / 5
         } else {
