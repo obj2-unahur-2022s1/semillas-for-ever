@@ -26,10 +26,10 @@ class QuinoaTest : DescribeSpec (
                 quinoa1.horasDeSolTolera().shouldBe(10)
             }
             it("Una quinoa de 0.9 m2 de espacio tolera hasta 7 horas de sol"){
-                quinoa1.horasDeSolTolera().shouldBe(7)
+                quinoa2.horasDeSolTolera().shouldBe(7)
             }
             it("Una quinoa de 2.0 m2 de espacio tolera hasta 7 horas de sol"){
-                quinoa1.horasDeSolTolera().shouldBe(7)
+                quinoa3.horasDeSolTolera().shouldBe(7)
             }
         }
     }
