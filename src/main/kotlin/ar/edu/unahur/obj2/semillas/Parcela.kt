@@ -3,7 +3,7 @@ package ar.edu.unahur.obj2.semillas
 class Parcela(
     private val ancho: Int,
     private val largo: Int,
-    private val horasDeSolQueRecibe: Int,
+    val horasDeSolQueRecibe: Int,
     private val plantas: MutableList<Planta>
 ) {
     fun superficie(): Int = ancho * largo
@@ -27,4 +27,6 @@ class Parcela(
     fun totalDePlantas(): Int {
         return plantas.size
     }
+
+    fun plantas(): List<Planta> = plantas
 }

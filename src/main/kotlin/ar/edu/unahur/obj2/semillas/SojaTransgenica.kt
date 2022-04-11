@@ -2,9 +2,13 @@ package ar.edu.unahur.obj2.semillas
 
 class SojaTransgenica(
     private val fechaDeObtencion: Int,
-    private val altura: Double
+    override val altura: Double
 ) : Soja(
     fechaDeObtencion, altura
 ) {
     override fun daNuevasSemillas(): Boolean = false
+
+    override fun esIdeal(parcela: Parcela): Boolean {
+        return parcela.totalDePlantas() === 1
+    }
 }
