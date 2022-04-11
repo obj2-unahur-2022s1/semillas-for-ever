@@ -20,7 +20,7 @@ open class Soja(
         return fechaDeObtencion > 2007 && altura in .75..0.9
     }
 
-    override fun esIdeal(parcela: Parcela): Boolean {
+    override fun esParcelaIdeal(parcela: Parcela): Boolean {
         return parcela.horasDeSolQueRecibe === horasDeSolTolera()
     }
 }

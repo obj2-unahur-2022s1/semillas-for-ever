@@ -14,7 +14,7 @@ open class Menta(
         return altura.plus(1.0)
     }
 
-    override fun esIdeal(parcela: Parcela): Boolean {
+    override fun esParcelaIdeal(parcela: Parcela): Boolean {
         return parcela.superficie() > 6
     }
 }
