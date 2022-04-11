@@ -6,7 +6,7 @@ import io.kotest.matchers.booleans.shouldBeFalse
 import io.kotest.matchers.shouldBe
 
 class SojaTransgenicaTestTest: DescribeSpec ({
-    describe("Creación de las plantas") {
+    describe("Creación de las sojas transgenicas") {
         val sojaGrande = SojaTransgenica(2021, 1.2)
         val sojaNormal = SojaTransgenica(2021, .8)
         val sojaChica = SojaTransgenica(2021, .4)

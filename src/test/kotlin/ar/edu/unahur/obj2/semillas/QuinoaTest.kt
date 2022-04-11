@@ -7,7 +7,7 @@ import io.kotest.matchers.shouldBe
 
 class QuinoaTest : DescribeSpec (
     {
-        describe("Creacion de la Quinoa"){
+        describe("Creacion de las quinoas"){
 
             val quinoa1 = Quinoa(2010,1.0,.2)
             val quinoa2 = Quinoa(2006,1.0,.9)
