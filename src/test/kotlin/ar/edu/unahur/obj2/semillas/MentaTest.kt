@@ -6,7 +6,7 @@ import io.kotest.matchers.booleans.shouldBeFalse
 import io.kotest.matchers.shouldBe
 
 class MentaTest: DescribeSpec ({
-    describe("Creación de las plantas") {
+    describe("Creación de las mentas") {
         val mentaGrande = Menta(2021, 1.0)
         val mentaNormal = Menta(2021, 0.5)
         val mentaChica = Menta(2021, 0.3)
