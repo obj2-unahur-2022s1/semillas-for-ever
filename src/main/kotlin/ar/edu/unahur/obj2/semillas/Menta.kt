@@ -13,5 +13,4 @@ class Menta(
     override fun espacioQueOcupa(): Double {
         return altura.plus(1.0)
     }
-
 }

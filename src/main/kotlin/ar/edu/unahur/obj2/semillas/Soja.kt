@@ -1,6 +1,6 @@
 package ar.edu.unahur.obj2.semillas
 
-class Soja(
+open class Soja(
     private val fechaDeObtencion: Int,
     private val altura: Double
 ) : Planta(
@@ -19,5 +19,4 @@ class Soja(
     override fun daNuevasSemillas(): Boolean {
         return fechaDeObtencion > 2007 && altura in .75..0.9
     }
-
 }

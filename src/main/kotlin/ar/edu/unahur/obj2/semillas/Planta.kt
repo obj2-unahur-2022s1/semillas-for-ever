@@ -19,5 +19,4 @@ open class Planta(
     open fun espacioQueOcupa(): Double {
         return 8.0
     }
-
 }
