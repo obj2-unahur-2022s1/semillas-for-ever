@@ -39,7 +39,6 @@ class ParcelaTest: DescribeSpec ({
             parcelaChica.superficie().shouldBe(16)
         }
 
-
         it("la cantidad maxima de plantas de una parcela de 4x4 deberia ser 9"){
             parcelaChica.cantidadMaximaDePlantas().shouldBe(9)
         }
@@ -54,19 +53,13 @@ class ParcelaTest: DescribeSpec ({
             parcelaChica.totalDePlantas().shouldBe(largoInicial + 1)
         }
 
-
-
         it("Una parcela chica con una Soja de 0.4 metros de altura no deberia tener problemas "){
             parcelaChica.tieneComplicaciones().shouldBeFalse()
         }
 
-
-
-
         it("La superficie de una parcela de 8 metros de largo y 6 metros de ancho deberia ser de 48 m2"){
             parcelaMediana.superficie().shouldBe(48)
         }
-
 
         it("la cantidad maxima de plantas de una parcela de 8x6 deberia ser 9"){
             parcelaMediana.cantidadMaximaDePlantas().shouldBe(9)
@@ -79,7 +72,6 @@ class ParcelaTest: DescribeSpec ({
         it("Una parcela mediana con una Soja de 0.4 metros de altura deberia tener problemas "){
             parcelaChica.tieneComplicaciones().shouldBeFalse()
         }
-
 
     }
 })
