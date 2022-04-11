@@ -10,7 +10,7 @@ class ParcelaTest: DescribeSpec ({
         val parcelaChica = Parcela(
             4,
             4,
-            8,
+            6,
             mutableListOf(
                 Soja(2021, 1.2),
                 Soja(2021, .8),
@@ -56,8 +56,8 @@ class ParcelaTest: DescribeSpec ({
 
 
 
-        it("Una parcela con una Soja de 0.4 metros de altura deberia tener problemas "){
-            parcelaChica.tieneComplicaciones().shouldBeTrue()
+        it("Una parcela chica con una Soja de 0.4 metros de altura no deberia tener problemas "){
+            parcelaChica.tieneComplicaciones().shouldBeFalse()
         }
 
 
@@ -76,7 +76,7 @@ class ParcelaTest: DescribeSpec ({
             parcelaMediana.totalDePlantas().shouldBe(7)
         }
 
-        it("Una parcela con una Soja de 0.4 metros de altura deberia tener problemas "){
+        it("Una parcela mediana con una Soja de 0.4 metros de altura deberia tener problemas "){
             parcelaChica.tieneComplicaciones().shouldBeFalse()
         }
 

@@ -7,9 +7,9 @@ import io.kotest.matchers.shouldBe
 
 class PeperinaTest: DescribeSpec ({
     describe("Creación de las plantas") {
-        val peperinaGrande = Menta(2021, 1.0)
-        val peperinaNormal = Menta(2021, 0.5)
-        val peperinaChica = Menta(2021, 0.3)
+        val peperinaGrande = Peperina(2021, 1.0)
+        val peperinaNormal = Peperina(2021, 0.5)
+        val peperinaChica = Peperina(2021, 0.3)
 
         it("una peperina de 1 metro, ocupar un espacio de 4 metros cuadrados.") {
             peperinaGrande.espacioQueOcupa().shouldBe(4)
@@ -20,7 +20,7 @@ class PeperinaTest: DescribeSpec ({
         }
 
         it("una peperina de 0.5 metros, ocuparía 3.0 metros cuadrados") {
-            peperinaNormal.espacioQueOcupa().shouldBe(1.5)
+            peperinaNormal.espacioQueOcupa().shouldBe(3.0)
         }
     }
 })
