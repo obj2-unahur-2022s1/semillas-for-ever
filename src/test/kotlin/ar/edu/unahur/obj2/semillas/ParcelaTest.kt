@@ -33,6 +33,27 @@ class ParcelaTest: DescribeSpec ({
             )
         )
 
+        val parcelaGrande = Parcela(
+            10,
+            8,
+            8,
+            mutableListOf(
+                Menta(2010, .5),
+                Peperina(2000, 1.0),
+                Quinoa(2012, 1.3, 2.0),
+                Soja(2022, .2),
+
+            )
+        )
+
+
+
+        val menta = Menta(2018, .5)
+        val peperina = Peperina(2020, 1.0)
+        val quinoa = Quinoa(2000, 0.3, 1.0)
+        val soja = Soja(2013, .7)
+        val sojaTransgenica = SojaTransgenica(2021, 0.4)
+
 
         it("La superficie de una parcela de 4 metros de largo y 4 metros de ancho deberia ser de 16 m2"){
             parcelaChica.superficie().shouldBe(16)
