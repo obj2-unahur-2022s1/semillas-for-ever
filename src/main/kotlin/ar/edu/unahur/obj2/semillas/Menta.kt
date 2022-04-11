@@ -1,6 +1,6 @@
 package ar.edu.unahur.obj2.semillas
 
-class Menta(
+open class Menta(
     private val fechaDeObtencion: Int,
     private val altura: Double
 ) : Planta(
